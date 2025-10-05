@@ -12,6 +12,8 @@ environment:
 
 
 dependencies:
+  flutter_appauth: ^6.0.0
+  camera: ^0.11.2
   flutter:
     sdk: flutter
     # Firebase
@@ -33,13 +35,13 @@ dependencies:
   flutter_svg: ^2.0.9
   cached_network_image: ^3.3.0
   shimmer: ^3.0.0
-  lottie: ^3.3.2
+  lottie: ^3.3.0
 
     # Networking
   dio: ^5.4.0
   retrofit: ^4.0.3
 
-    # Local Storage
+  # shimmer déjà déclaré ci-dessus
   shared_preferences: ^2.2.2
   hive: ^2.2.3
   json_annotation: ^4.9.0
@@ -72,8 +74,9 @@ dependencies:
   dartz: ^0.10.1
   get_it: ^8.2.0
   flutter_stripe: ^12.0.2
-  flutter_web_auth: ^0.6.0
+
   tflite_flutter: ^0.11.0
+  google_fonts: ^6.3.2
 
 dev_dependencies:
   flutter_test:
@@ -91,35 +94,27 @@ dev_dependencies:
   analyzer: ^6.4.1
   json_serializable: ^6.7.1
 
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
-
-# The following section is specific to Flutter packages.
 flutter:
-
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
   uses-material-design: true
-
-  # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/images/mentor1.jpg
+    - assets/images/mentor2.jpg
+    - assets/images/mentor3.jpg
+    - assets/images/mentor4.jpg
     - assets/icons/
     - assets/animations/
     - assets/fonts/
-
-  
+    - assets/mentor_recommender.tflite
+   
   fonts:
-      - family: Poppins
-        fonts:
-          - asset: assets/fonts/Poppins-Regular.ttf
-          - asset: assets/fonts/Poppins-Medium.ttf
-            weight: 500
-          - asset: assets/fonts/Poppins-SemiBold.ttf
-            weight: 600
-          - asset: assets/fonts/Poppins-Bold.ttf
-            weight: 700
-  #
-  # For details regarding fonts from package dependencies,
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
   # see https://flutter.dev/to/font-from-package
